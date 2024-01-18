@@ -4,11 +4,13 @@ import Footer from "./components/Footer"
 import { BrowserRouter  , Routes , Route } from "react-router-dom"
 import CategoryPage from "./pages/CategoryPage"
 import SpecificMealPage from "./pages/SpecificMealPage"
+import { Provider } from 'react-redux';
+import store from "./stores/store";
 
 function App() {
 
   return (
-    <>
+    <Provider store={store}>
        <Header/>
     <BrowserRouter>
     <Routes>
@@ -21,7 +23,7 @@ function App() {
  
     </BrowserRouter>
     <Footer/>
-    </>
+    </Provider>
 
 
   )
