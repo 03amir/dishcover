@@ -68,7 +68,7 @@ const MealSingle = ({ meal }) => {
                                     />
                                 ) : (
                                     <BsCart2
-                                        className="text-3xl add-to-cart cursor-pointer"
+                                        className="text-3xl cursor-pointer"
                                         onClick={handleAddToCart}
                                     />
                                 )}

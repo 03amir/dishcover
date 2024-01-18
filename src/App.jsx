@@ -6,23 +6,27 @@ import CategoryPage from "./pages/CategoryPage"
 import SpecificMealPage from "./pages/SpecificMealPage"
 import { Provider } from 'react-redux';
 import store from "./stores/store";
+import SavedPage from "./pages/SavedPage"
 
 function App() {
 
   return (
     <Provider store={store}>
-       <Header/>
+    
     <BrowserRouter>
+        <Header />
     <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/category/:categoryName" element={<CategoryPage />} />
           <Route path="/meal/:id" element={<SpecificMealPage />} />
+          <Route path="/saved-meals" element={<SavedPage />} />
+
 
     </Routes>
    
- 
+        <Footer />
+
     </BrowserRouter>
-    <Footer/>
     </Provider>
 
 

@@ -5,6 +5,7 @@ import { SlArrowLeftCircle } from "react-icons/sl";
 import { sliderLimit } from "../constants";
 
 function Slider() {
+  
   const [indianFood, setIndianFood] = useState([]);
   const [sindex, setsindex] = useState(0);
 

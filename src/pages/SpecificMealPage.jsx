@@ -56,7 +56,7 @@ const SpecificMealPage = () => {
   }, []);
 
   return (
-    <div className="">
+    <div className='min-h-[48vh]'>
       <SingleMeal meal={specificMeal}/>
     </div>
   );

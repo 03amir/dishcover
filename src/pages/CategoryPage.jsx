@@ -19,7 +19,7 @@ const CategoryPage = () => {
   }, []);
 
   return (
-    <main className="py-5">
+    <main className='min-h-[48vh] py-5'>
       {categoryMeals?.length ? <Meal meals={categoryMeals} /> : null}
     </main>
   );

@@ -14,7 +14,7 @@ const cartSlice = createSlice({
         ,
         removeFromCart: (state, action) => {
             const  id  = action.payload;
-            console.log(id)
+            console.log("deleting" , id)
             state.data = state.data.filter((el) => el.id !== id);
         }
         ,
