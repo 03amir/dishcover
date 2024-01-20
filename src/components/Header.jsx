@@ -1,4 +1,3 @@
-
 import { Link} from 'react-router-dom';
 import { GoSearch } from 'react-icons/go';
 import { MdOutlineLocalOffer } from 'react-icons/md';
@@ -20,10 +19,12 @@ function Header() {
             </Link>
 
             <div className="flex flex-row items-center justify-around lg:w-1/2">
+
                 {/* Search */}
-                <div className="cursor-pointer opacity-70 flex items-center justify-between gap-1 hover:text-red-500 transition duration-300">
+
+                <Link to={"search"} className="cursor-pointer opacity-70 flex items-center justify-between gap-1 hover:text-red-500 transition duration-300">
                     <GoSearch className="text-xl lg:text-2xl" /> <p className="hidden lg:inline">Search</p>
-                </div>
+                </Link>
 
                 {/* Offers */}
                 <Link to={"saved-meals"} className="cursor-pointer opacity-70 flex items-center justify-between gap-1 hover:text-red-500 transition duration-300 relative">
