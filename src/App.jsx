@@ -8,6 +8,7 @@ import { Provider } from "react-redux";
 import store from "./stores/store";
 import SavedPage from "./pages/SavedPage";
 import SearchPage from "./pages/SearchPage";
+import SideBar from "./components/SideBar";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/saved-meals" element={<SavedPage />} />
           <Route path="/search" element={<SearchPage />} />
         </Routes>
+        <SideBar/>
         <Footer />
       </BrowserRouter>
     </Provider>

@@ -4,6 +4,7 @@ import Meal from "../components/Meal";
 import { base_url, MEAL_CATEGORIES_URL } from "../constants";
 
 const CategoryPage = () => {
+
   const { categoryName } = useParams();
 
   const [categoryMeals, setCategoryMeals] = useState([]);
@@ -16,7 +17,7 @@ const CategoryPage = () => {
 
   useEffect(() => {
     getCategoryMeals();
-  }, []);
+  }, [categoryName]);
 
   return (
     <main className='min-h-[48vh] py-5'>

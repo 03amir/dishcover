@@ -5,12 +5,19 @@ import { BsCart2 } from 'react-icons/bs';
 import { IoFastFoodOutline } from 'react-icons/io5';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { GrClose } from 'react-icons/gr';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { openSideBar } from '../stores/sidebarSlice';
 
 function Header() {
 
+    const dispatch = useDispatch();
 
     const { data } = useSelector((state) => state.cart);
+
+    function handleMenu(){
+        console.log("calling the open side bar")
+        dispatch(openSideBar());
+    }
 
     return (
         <div className="flex items-center w-90% lg:w-3/5 m-auto justify-between my-4 lg:my-9 p-4">
@@ -38,8 +45,8 @@ function Header() {
                 </Link>
 
                 {/* Cart */}
-                <div className="cursor-pointer opacity-70 flex items-center justify-between gap-1 hover:text-red-500 transition duration-300">
-                    <GiHamburgerMenu className="text-xl lg:text-2xl" /> <h2 className="hidden lg:inline">Menu</h2>
+                <div onClick={handleMenu} className="cursor-pointer opacity-70 flex items-center justify-between gap-1 hover:text-red-500 transition duration-300">
+                    <GiHamburgerMenu className="text-xl lg:text-2xl" /> <h2 className="hidden lg:inline" >Menu</h2>
                 </div>
             </div>
         </div>
