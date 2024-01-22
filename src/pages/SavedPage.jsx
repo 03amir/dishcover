@@ -1,11 +1,10 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { RiCloseCircleLine } from 'react-icons/ri';
 import { useDispatch, useSelector } from 'react-redux';
 import { removeFromCart } from '../stores/cartSlice';
 import { BsCartCheckFill } from 'react-icons/bs';
 
 const SavedPage = () => {
+  
   const savedMeals = useSelector((state) => state.cart.data);
   const dispatch = useDispatch();
 

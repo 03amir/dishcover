@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { base_url, SEARCH_URL, getSuggestions } from "../constants";
-import Meal from "../components/Meal";
+import Meals from "../components/Meals";
 
 
 const SearchPage = () => {
@@ -84,7 +84,7 @@ const SearchPage = () => {
         {noMealsMessage ? (
           <p className="text-center text-gray-600">{noMealsMessage}</p>
         ) : (
-          <Meal meals={searchData} />
+          <Meals meals={searchData} />
         )}
       </div>
     </div>

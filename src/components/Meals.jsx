@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Meal = ({ meals }) => {
+const Meals = ({ meals }) => {
   return (
     <>
       <h1 className="w-3/5 m-auto font-bold text-3xl text-gray-500 mb-5 mt-5">
@@ -37,4 +37,4 @@ const Meal = ({ meals }) => {
   );
 };
 
-export default Meal;
+export default Meals;
