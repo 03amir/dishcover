@@ -1,26 +1,25 @@
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { closeSideBar } from '../stores/sidebarSlice';
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { GrClose } from 'react-icons/gr';
+import { fetchCategories } from "../stores/categoriesSlice"; 
 
 
 const SideBar = () => {
     
     const isSidebarOpen = useSelector(state => state.sidebar.isOpen);
-    const [categories, setCategories] = useState([]);
 
-    useEffect(() => {
-        getCategoris();
-    }, []);
-
-    async function getCategoris() {
-        const res = await fetch("https://www.themealdb.com/api/json/v1/1/categories.php");
-        const data = await res.json();
-        setCategories(data.categories);
-    }
 
     const dispatch = useDispatch();
+    const categories = useSelector((state) => state.categories.categories);
+
+    useEffect(() => {
+        if (categories.length === 0) {
+            dispatch(fetchCategories());
+        }
+    }, [categories, dispatch]);
+
 
     const closeSidebar = () => {
         dispatch(closeSideBar());
