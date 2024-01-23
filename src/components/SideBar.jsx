@@ -32,7 +32,7 @@ const SideBar = () => {
 
             <div className="flex items-center justify-end h-screen">
 
-                <div className="w-[18vw] bg-orange-500 text-blackshadow-lg transform translate-x-0 transition-transform duration-300 ease-in-out h-full overflow-y-auto">
+                <div className="w-[38vw] lg:w-[18vw]  bg-orange-500 text-blackshadow-lg transform translate-x-0 transition-transform duration-300 ease-in-out h-full overflow-y-auto">
 
                     <div className="flex justify-start p-4 mt-3">
                         <GrClose className="text-white text-2xl hover:text-black cursor-pointer" onClick={closeSidebar} />

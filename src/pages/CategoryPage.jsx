@@ -31,7 +31,7 @@ const CategoryPage = () => {
 
   return (
     <main className='min-h-[48vh] py-5 my-9'>
-      <div className='w-3/5 m-auto p-8 border-2 border-orange-400 rounded-md mb-10'>
+      <div className='w-[90%] lg:w-3/5 m-auto p-8 border-2 border-orange-400 rounded-md mb-10'>
         <h2 className='text-4xl font-bold mb-3 text-gray-700'>{categoryName}</h2>
         <p className='font-semibold text-lg'>{catDescription}</p>
       </div>

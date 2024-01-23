@@ -14,12 +14,12 @@ const SavedPage = () => {
 
   return (
     <div className='min-h-[48vh]'>
-      <h1 className='w-3/5 m-auto font-bold text-3xl text-gray-500 mb-5 mt-5'>Saved Meals</h1>
+      <h1 className='w-[90%] lg:w-3/5 m-auto font-bold text-3xl text-gray-500 mb-5 mt-5'>Saved Meals</h1>
 
       {savedMeals.length === 0 ? (
-        <h2 className='w-3/5 m-auto text-3xl text-gray-500 text-center my-8'>You have no saved meals yet. Start adding delicious meals to your list!</h2>
+        <h2 className='w-[90%] lg:w-3/5 m-auto text-xl lg:text-3xl text-gray-500 text-center my-8'>You have no saved meals yet. Start adding delicious meals to your list!</h2>
       ) : (
-        <div className='w-3/5 m-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10'>
+          <div className='w-[90%] lg:w-3/5 m-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10'>
           {savedMeals.map((mealItem) => {
             const { id, title, thumbnail } = mealItem;
 

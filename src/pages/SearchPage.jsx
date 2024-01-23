@@ -18,6 +18,7 @@ const SearchPage = () => {
   };
 
   const handleSearch = async () => {
+    
     const trimmedSearchValue = searchValue.trim();
 
     if (trimmedSearchValue !== "") {
@@ -43,7 +44,7 @@ const SearchPage = () => {
 
   return (
     <div className="m-auto my-8 min-h-[48vh]">
-      <div className="w-3/5 m-auto mx-auto p-2 bg-white rounded-md">
+      <div className="w-[90%] lg:w-3/5 m-auto mx-auto p-2 bg-white rounded-md">
         <div className="flex items-center pb-2 mb-4">
           <input
             type="text"
@@ -70,7 +71,6 @@ const SearchPage = () => {
                 onClick={() => {
                   setSearchValue(item);
                   setSuggestions([]);
-                  handleSearch();
                 }}
               >
                 {item}

@@ -15,8 +15,8 @@ const CategoryList = () => {
     }, [categories, dispatch]);
 
     return (
-        <div className="sm:w-[80%] lg:w-3/5 m-auto mt-20 ">
-            <div className="container">
+        <div className="w-[80%] lg:w-3/5 m-auto mt-20">
+            <div className="">
                 <h1 className="font-bold text-3xl text-gray-600 mx-2 relative">Categories</h1>
 
                 <section className="my-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-9">

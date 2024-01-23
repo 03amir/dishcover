@@ -40,7 +40,7 @@ const MealSingle = ({ meal }) => {
 
     return (
         <div className="mb-20 mt-10">
-            <div className="w-3/5 m-auto p-2">
+            <div className="w-[90%] lg:w-3/5  m-auto p-2">
                 <h1 className="text-3xl font-bold my-10 ml-2 text-gray-700">
                     Meal Details
                 </h1>
@@ -80,7 +80,7 @@ const MealSingle = ({ meal }) => {
                                     <span className="uppercase">{meal?.category}</span>
                                 </div>
 
-                                <div className="flex items-center mb-2">
+                                <div className="flex overflow-hidden items-center mb-2">
                                     <span className="text-lg font-semibold">Source:</span>
                                     <a href={meal.source} className="ml-2">
                                         {meal.source

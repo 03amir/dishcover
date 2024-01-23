@@ -20,22 +20,22 @@ function Header() {
     }
 
     return (
-        <div className="flex items-center w-90% lg:w-3/5 m-auto justify-between my-4 lg:my-9 p-4">
+        <div className="flex items-center w-[90%] lg:w-3/5 m-auto  justify-between my-4 lg:my-9 p-4 ">
             <Link to={"/"} className="flex items-center cursor-pointer hover:text-red-500 transition duration-300">
                 <IoFastFoodOutline className="text-5xl lg:text-6xl" />
             </Link>
 
-            <div className="flex flex-row items-center justify-around lg:w-1/2">
+            <div className="flex flex-row items-center justify-around lg:w-1/2 gap-3">
 
                 {/* Search */}
 
                 <Link to={"search"} className="cursor-pointer opacity-70 flex items-center justify-between gap-1 hover:text-red-500 transition duration-300">
-                    <GoSearch className="text-xl lg:text-2xl" /> <p className="hidden lg:inline">Search</p>
+                    <GoSearch className="text-2xl lg:text-2xl" /> <p className="hidden lg:inline">Search</p>
                 </Link>
 
                 {/* Offers */}
                 <Link to={"saved-meals"} className="cursor-pointer opacity-70 flex items-center justify-between gap-1 hover:text-red-500 transition duration-300 relative">
-                    <BsCart2 className="text-xl lg:text-2xl" />
+                    <BsCart2 className="text-2xl lg:text-2xl" />
                     {data?.length > 0 && (
                         <span className="absolute -top-2 -left-2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">
                             {data?.length}
@@ -46,7 +46,7 @@ function Header() {
 
                 {/* Cart */}
                 <div onClick={handleMenu} className="cursor-pointer opacity-70 flex items-center justify-between gap-1 hover:text-red-500 transition duration-300">
-                    <GiHamburgerMenu className="text-xl lg:text-2xl" /> <h2 className="hidden lg:inline" >Menu</h2>
+                    <GiHamburgerMenu className="text-2xl lg:text-2xl" /> <h2 className="hidden lg:inline" >Menu</h2>
                 </div>
             </div>
         </div>

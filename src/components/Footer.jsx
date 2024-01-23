@@ -5,8 +5,8 @@ import { LuGithub } from "react-icons/lu";
 export default function Footer() {
   return (
     <>
-      <div className="sm:w-4/5 md:w-3/5 lg:w-3/5 xl:w-3/5 2xl:w-3/5 m-auto my-10 p-4 sm:p-6 flex flex-wrap items-start justify-between">
-        <div className="mb-4 sm:mb-8">
+      <div className="sm:w-4/5 m-auto sm:my-10  my-0 sm:p-4 p-10 flex flex-wrap items-start justify-between md:w-3/5 lg:w-3/5 xl:w-3/5 2xl:w-3/5 ">
+           <div className="mb-4 sm:mb-8">
           <h1 className="text-base sm:text-lg lg:text-lg font-bold mb-2 sm:mb-4 hover:text-gray-500 transition duration-300">
             COMPANY
           </h1>

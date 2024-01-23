@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import SlideCard from "./SlideCard";
 import { SlArrowRightCircle } from "react-icons/sl";
 import { SlArrowLeftCircle } from "react-icons/sl";
-import { sliderLimit } from "../constants";
+import { sliderLimit , smallSliderLimit } from "../constants";
+import UseScreenSize from "../hooks/UseScreenSize";
 
 function Slider() {
   
@@ -16,6 +17,9 @@ function Slider() {
     const res = await data.json();
     setIndianFood(res.meals);
   }
+
+  const isSmallScreen = UseScreenSize();
+  const dynamicSliderLimit = isSmallScreen ? smallSliderLimit : sliderLimit;
 
   useEffect(() => {
     getIndian();
@@ -42,16 +46,16 @@ function Slider() {
 
   return (
     <>
-      <h1 className="font-bold text-3xl text-gray-600 w-3/5 m-auto mt-20  ">
-        Populer
+      <h1 className="font-bold text-3xl text-gray-600 w-[80%] lg:w-3/5 m-auto mt-20">
+        Popular
       </h1>
-      <div className="flex items-center justify-around w-3/5 m-auto mt-14">
+      <div className="flex items-center justify-around w-[90%] lg:w-3/5 m-auto mt-14">
         <SlArrowLeftCircle
           className="text-3xl opacity-90 cursor-pointer hover:text-red-500 transition duration-300"
           onClick={handleLeft}
         />
 
-        {indianFood.slice(sindex, sindex + sliderLimit).map((el, idMeal) => {
+        {indianFood.slice(sindex, sindex + dynamicSliderLimit).map((el, idMeal) => {
           return <SlideCard key={idMeal} data={el} />;
         })}
 

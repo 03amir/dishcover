@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 const Meals = ({ meals }) => {
   return (
     <>
-      <h1 className="w-3/5 m-auto font-bold text-3xl text-gray-500 mb-5 mt-5">
+      <h1 className="w-[90%] lg:w-3/5  m-auto font-bold text-3xl text-gray-500 mb-5 mt-5">
         Meals
       </h1>
 
-      <div className="w-3/5 m-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+      <div className="w-[90%] lg:w-3/5 m-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
         {meals?.map((mealItem) => {
           const {
             idMeal: id,
