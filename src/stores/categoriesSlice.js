@@ -21,7 +21,7 @@ const categoriesSlice = createSlice({
             })
             .addCase(fetchCategories.fulfilled, (state, action) => {
                 state.status = 'succeeded';
-                state.categories = action.payload;
+                state.categories = action.payload.filter(category => category.strCategory.toLowerCase() !== 'beef' && category.strCategory.toLowerCase() !== 'pork' );
             })
             .addCase(fetchCategories.rejected, (state, action) => {
                 state.status = 'failed';
